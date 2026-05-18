@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="assets/icons/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mariajosé Carvajal — Microbiología de Levaduras y Biotecnología Agrícola</title>
+
+
+<!-- Open Graph -->
+<meta property="og:title" content="Mariajosé Carvajal — Microbiología de Levaduras y Biotecnología Agrícola">
+<meta property="og:description" content="Investigadora en microbiología agrícola, especializada en levaduras nativas, biotecnología vegetal y microbioma del suelo.">
+<meta property="og:image" content="https://mariajose-carvajal.netlify.app/img/og-image.jpg">
+<meta property="og:url" content="https://mariajose-carvajal.netlify.app">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mariajosé Carvajal — Microbiología de Levaduras y Biotecnología Agrícola">
+<meta name="twitter:description" content="Investigadora en microbiología agrícola, especializada en levaduras nativas, biotecnología vegetal y microbioma del suelo.">
+<meta name="twitter:image" content="https://mariajose-carvajal.netlify.app/img/og-image.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Syne:wght@400;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body data-theme="dark">
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo">MJ Carvajal</span>
+  <div class="nav-links">
+    <a href="#biografia">Biografía</a>
+    <a href="#publicaciones">Publicaciones</a>
+    <a href="#metodos">Métodos</a>
+    <a href="#impacto">Impacto</a>
+    <a href="#galeria">Galería</a>
+    <a href="#contacto">Contacto</a>
+    <button class="theme-btn" id="themeBtn" aria-label="Cambiar tema"></button>
+  </div>
+</nav>
+
+<!-- HERO — UNTOUCHED -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-content">
+    <div class="hero-eyebrow">YeastLab · PUC Chile · Microbiología de Suelos</div>
+    <h1 class="hero-name">Mariajosé<br><em>Carvajal</em></h1>
+    <div class="hero-title">Researcher in Yeast Microbiology &amp; Agricultural Biotechnology</div>
+    <p class="hero-subtitle">Exploring the hidden microbial life that supports sustainable agriculture.</p>
+  </div>
+  <div class="scroll-indicator">
+    <span class="scroll-text">Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Levaduras Nativas <span class="msep">✦</span></span>
+    <span class="marquee-item">Solicoccozyma terrea <span class="msep">✦</span></span>
+    <span class="marquee-item">Promoción de Crecimiento Vegetal <span class="msep">✦</span></span>
+    <span class="marquee-item">Compuestos Orgánicos Volátiles <span class="msep">✦</span></span>
+    <span class="marquee-item">Microbioma del Suelo <span class="msep">✦</span></span>
+    <span class="marquee-item">Biofertilizantes <span class="msep">✦</span></span>
+    <span class="marquee-item">Hongos Entomopatógenos <span class="msep">✦</span></span>
+    <span class="marquee-item">Análisis qPCR <span class="msep">✦</span></span>
+    <span class="marquee-item">Levaduras Nativas <span class="msep">✦</span></span>
+    <span class="marquee-item">Solicoccozyma terrea <span class="msep">✦</span></span>
+    <span class="marquee-item">Promoción de Crecimiento Vegetal <span class="msep">✦</span></span>
+    <span class="marquee-item">Compuestos Orgánicos Volátiles <span class="msep">✦</span></span>
+    <span class="marquee-item">Microbioma del Suelo <span class="msep">✦</span></span>
+    <span class="marquee-item">Biofertilizantes <span class="msep">✦</span></span>
+    <span class="marquee-item">Hongos Entomopatógenos <span class="msep">✦</span></span>
+    <span class="marquee-item">Análisis qPCR <span class="msep">✦</span></span>
+  </div>
+</div>
+
+<!-- BIOGRAFÍA -->
+<section id="biografia">
+  <div class="bio-wrap">
+    <div class="bio-sticky">
+      <div class="section-label reveal">01 — Biografía</div>
+      <div class="bio-canvas-wrap reveal rd1">
+        <canvas id="bio-canvas" width="360" height="432"></canvas>
+        <img
+          class="bio-photo"
+          src="assets/img/profile/cote.webp"
+          alt="Mariajosé Carvajal"
+          onload="this.classList.add('loaded')"
+        >
+        <div class="bio-photo-name"><span>Mariajosé Carvajal</span></div>
+      </div>
+      <div class="bio-tags reveal rd2">
+        <span class="tag">Agronomía</span>
+        <span class="tag">Fisiología Vegetal</span>
+        <span class="tag">Doctoranda</span>
+        <span class="tag">YeastLab</span>
+        <span class="tag">PUC Chile</span>
+      </div>
+    </div>
+    <div>
+      <p class="bio-lead reveal rd1">
+        <strong>Mariajosé Carvajal</strong> es investigadora en microbiología y genética de levaduras, afiliada al Departamento de Fruticultura de la <strong>Pontificia Universidad Católica de Chile</strong> y colaboradora activa del <strong>Laboratorio de Microbiología y Genética de Levaduras (YeastLab)</strong>.
+      </p>
+      <p class="bio-body reveal rd2">
+        Su trayectoria académica incluye una licenciatura en Agronomía por la PUC, un Magíster en Fisiología y Producción Vegetal en la misma casa de estudios, y actualmente cursa un Doctorado en Ciencias Agrícolas y Sistemas Naturales. Su formación integra la biología molecular, la microbiología del suelo y la biotecnología agrícola.
+      </p>
+      <p class="bio-body reveal rd3">
+        Su investigación se centra en la identificación, caracterización y evaluación de levaduras y hongos nativos de Chile con potencial biotecnológico para la agricultura sostenible. Su trabajo tiende puentes entre la microbiología molecular y la innovación agrícola a escala de campo, con un enfoque en los mecanismos moleculares que median la comunicación entre microorganismos y plantas.
+      </p>
+      <p class="bio-body reveal rd4">
+        Su nombre aparece como coautora en publicaciones arbitradas en revistas internacionales de alto impacto como <em>Plant and Soil</em> y <em>BioControl</em>, contribuyendo al avance del conocimiento sobre las interacciones microbianas nativas en sistemas agrícolas.
+      </p>
+      <div class="bio-divider"></div>
+      <div class="credentials-list">
+        <div class="credential reveal">
+          <div class="cred-line"></div>
+          <div><div class="cred-title">Aislamiento y tamizaje de cepas microbianas</div>
+          <div class="cred-body">Muestreo y cultivo de cepas microbianas nativas de suelos chilenos para su evaluación biotecnológica en sistemas agrícolas.</div></div>
+        </div>
+        <div class="credential reveal rd1">
+          <div class="cred-line"></div>
+          <div><div class="cred-title">Bioensayos con plantas</div>
+          <div class="cred-body">Experimentos en invernadero e in vitro para evaluar el efecto de inoculantes microbianos en arquitectura radicular y producción de biomasa.</div></div>
+        </div>
+        <div class="credential reveal rd2">
+          <div class="cred-line"></div>
+          <div><div class="cred-title">Análisis de Compuestos Orgánicos Volátiles — SPME–GC–MS</div>
+          <div class="cred-body">Identificación de señales microbianas volátiles que modulan la fisiología vegetal mediante microextracción en fase sólida acoplada a cromatografía de gases–espectrometría de masas.</div></div>
+        </div>
+        <div class="credential reveal rd3">
+          <div class="cred-line"></div>
+          <div><div class="cred-title">Expresión génica mediante qPCR</div>
+          <div class="cred-body">Caracterización de respuestas moleculares en raíces de tomate ante interacciones con levaduras del suelo, con énfasis en transportadores de nitrato.</div></div>
+        </div>
+        <div class="credential reveal rd4">
+          <div class="cred-line"></div>
+          <div><div class="cred-title">Evaluación de organismos entomopatógenos</div>
+          <div class="cred-body">Análisis del potencial de control biológico de aislamientos fúngicos frente a plagas agrícolas de importancia económica.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICACIONES -->
+<section id="publicaciones">
+  <div class="pub-header-row">
+    <div>
+      <div class="section-label reveal">02 — Publicaciones</div>
+      <h2 class="section-heading reveal rd1">Investigación<br><em>Publicada</em></h2>
+    </div>
+    <p class="pub-intro-text reveal rd2">Artículos arbitrados en revistas internacionales de alto impacto, avanzando la comprensión de las interacciones microbianas nativas en sistemas agrícolas sostenibles.</p>
+  </div>
+  <div class="pub-list">
+    <a class="pub-item reveal" href="https://link.springer.com/article/10.1007/s11104-023-05906-x" target="_blank" rel="noopener">
+      <div class="pub-num">01</div>
+      <div>
+        <div class="pub-journal">Plant and Soil · Springer</div>
+        <p class="pub-title-text">Screening for indole-3-acetic acid synthesis and ACC deaminase activity in soil yeasts from Chile uncovers <em>Solicoccozyma terrea</em> as an effective plant growth promoter.</p>
+        <div class="pub-meta">2023 · doi:10.1007/s11104-023-05906-x</div>
+      </div>
+      <div class="pub-arrow-btn">↗</div>
+    </a>
+    <a class="pub-item reveal rd1" href="https://link.springer.com/article/10.1007/s11104-025-07393-8" target="_blank" rel="noopener">
+      <div class="pub-num">02</div>
+      <div>
+        <div class="pub-journal">Plant and Soil · Springer</div>
+        <p class="pub-title-text">Volatile organic compounds produced after exposure of tomato roots to the soil yeast <em>Solicoccozyma terrea</em> modulate root nitrate transporters in tomato.</p>
+        <div class="pub-meta">2025 · doi:10.1007/s11104-025-07393-8</div>
+      </div>
+      <div class="pub-arrow-btn">↗</div>
+    </a>
+    <a class="pub-item reveal rd2" href="https://link.springer.com/article/10.1007/s10526-025-10311-7" target="_blank" rel="noopener">
+      <div class="pub-num">03</div>
+      <div>
+        <div class="pub-journal">BioControl · Springer</div>
+        <p class="pub-title-text">Potential of an entomopathogenic fungus from the <em>Cladosporium cladosporioides</em> species complex for aphid control.</p>
+        <div class="pub-meta">2025 · doi:10.1007/s10526-025-10311-7</div>
+      </div>
+      <div class="pub-arrow-btn">↗</div>
+    </a>
+    <a class="pub-item reveal rd3" href="https://link.springer.com/search" target="_blank" rel="noopener">
+      <div class="pub-num">04</div>
+      <div>
+        <div class="pub-journal">En Prensa · Springer</div>
+        <p class="pub-title-text">Root nitrate transporters expression and localization in tomato respond differently to soil yeasts with ACC deaminase activity or indole-3-acetic acid synthesis.</p>
+        <div class="pub-meta">En revisión · Búsqueda en Springer</div>
+      </div>
+      <div class="pub-arrow-btn">↗</div>
+    </a>
+  </div>
+</section>
+
+<!-- MÉTODOS -->
+<section id="metodos">
+  <div class="metodos-wrap">
+    <div class="metodos-header-row">
+      <div>
+        <div class="section-label reveal">03 — Metodología</div>
+        <h2 class="section-heading reveal rd1">Técnicas<br><em>Científicas</em></h2>
+      </div>
+      <p class="metodos-intro reveal rd2">Un conjunto de técnicas avanzadas de biología molecular y microbiología para explorar la interfaz suelo–planta–microorganismo, desde el campo hasta el laboratorio.</p>
+    </div>
+    <div class="methods-grid">
+      <div class="method-card reveal">
+        <svg class="m-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="20" cy="20" r="9"/><circle cx="20" cy="20" r="3.5" fill="currentColor" opacity="0.25"/>
+          <circle cx="30" cy="11" r="4"/><circle cx="10" cy="29" r="3.5"/>
+          <line x1="20" y1="11" x2="26" y2="13" opacity="0.45"/><line x1="20" y1="29" x2="14" y2="27" opacity="0.45"/>
+        </svg>
+        <div class="m-name">Aislamiento de Levaduras y Hongos</div>
+        <div class="m-desc">Muestreo y cultivo de cepas microbianas nativas de suelos chilenos para tamizaje biotecnológico.</div>
+      </div>
+      <div class="method-card reveal rd1">
+        <svg class="m-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 36C20 36 10 26 10 18 10 12 14.5 8 20 8 25.5 8 30 12 30 18 30 26 20 36Z"/>
+          <path d="M20 8L20 3"/><path d="M15 21Q20 15 25 21" stroke-width="1" opacity="0.6"/>
+          <circle cx="20" cy="17" r="2" fill="currentColor" opacity="0.35"/>
+        </svg>
+        <div class="m-name">Bioensayos con Plantas</div>
+        <div class="m-desc">Experimentos en invernadero e in vitro para evaluar inoculantes microbianos sobre arquitectura radicular y biomasa.</div>
+      </div>
+      <div class="method-card reveal rd2">
+        <svg class="m-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 30L10 8 16 22 22 12 28 26 34 10" fill="none"/>
+          <path d="M3 30L38 30" opacity="0.25" stroke-width=".8"/>
+          <path d="M3 6L3 30" opacity="0.25" stroke-width=".8"/>
+          <circle cx="22" cy="12" r="2.5" fill="currentColor" opacity="0.3"/>
+        </svg>
+        <div class="m-name">SPME–GC–MS · Análisis de VOCs</div>
+        <div class="m-desc">Microextracción en fase sólida acoplada a cromatografía de gases–masas para el perfilado de compuestos volátiles.</div>
+      </div>
+      <div class="method-card reveal rd3">
+        <svg class="m-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="28" width="5" height="8" rx="1"/><rect x="13" y="21" width="5" height="15" rx="1"/>
+          <rect x="22" y="14" width="5" height="22" rx="1"/><rect x="31" y="23" width="5" height="13" rx="1"/>
+          <path d="M3 28L38 28" opacity="0.25" stroke-width=".8"/>
+        </svg>
+        <div class="m-name">Ensayos Enzimáticos</div>
+        <div class="m-desc">Ensayos colorimétricos y fluorométricos para actividad de quitinasa, proteasa y lipasa en aislamientos fúngicos.</div>
+      </div>
+      <div class="method-card reveal rd4">
+        <svg class="m-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 32L8 8 12 8 12 32"/><path d="M16 32L16 14 20 14 20 32"/>
+          <path d="M24 32L24 6 28 6 28 32"/><path d="M32 32L32 20 36 20 36 32"/>
+          <path d="M6 32L38 32" opacity="0.25" stroke-width=".8"/>
+        </svg>
+        <div class="m-name">Expresión Génica — qPCR</div>
+        <div class="m-desc">PCR cuantitativa para caracterizar respuestas génicas de plantas ante señales volátiles microbianas e inoculantes del suelo.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACTO -->
+<section id="impacto">
+  <div class="impact-bg-word" id="impact-bg" aria-hidden="true">Suelo</div>
+  <div class="impact-wrap">
+    <div class="impact-header">
+      <div class="section-label reveal">04 — Por Qué Importa</div>
+      <h2 class="section-heading section-heading--impact reveal rd1">El futuro<br>crece bajo<br><em>la tierra</em></h2>
+      <p class="impact-lead reveal rd2">Los descubrimientos microbianos en suelos nativos chilenos están reimaginando cómo alimentamos al mundo de manera sostenible.</p>
+    </div>
+    <div class="impact-grid">
+      <div class="impact-card reveal">
+        <div class="impact-num">01</div>
+        <div class="i-ring"><svg viewBox="0 0 17 17" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8.5 16C8.5 16 3 10 3 6.5 3 3.8 5.5 2 8.5 2 11.5 2 14 3.8 14 6.5 14 10 8.5 16 8.5 16Z"/><circle cx="8.5" cy="6.5" r="1.5" fill="currentColor"/></svg></div>
+        <div class="i-title">Biofertilizantes Nativos</div>
+        <div class="i-text">Levaduras nativas como promotoras naturales del crecimiento vegetal, reemplazando fertilizantes sintéticos con biología viva del suelo.</div>
+      </div>
+      <div class="impact-card reveal rd1">
+        <div class="impact-num">02</div>
+        <div class="i-ring"><svg viewBox="0 0 17 17" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8.5" cy="8.5" r="6.5"/><circle cx="8.5" cy="8.5" r="2.5"/><line x1="8.5" y1="2" x2="8.5" y2="4.5"/><line x1="8.5" y1="12.5" x2="8.5" y2="15"/></svg></div>
+        <div class="i-title">Agricultura Microbiana</div>
+        <div class="i-text">Aplicación de la microbiología del suelo para resolver desafíos reales de producción agrícola mediante soluciones biológicas y sostenibles.</div>
+      </div>
+      <div class="impact-card reveal rd2">
+        <div class="impact-num">03</div>
+        <div class="i-ring"><svg viewBox="0 0 17 17" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8.5 1L10.5 6H16L11.5 9.5 13.5 15 8.5 11.5 3.5 15 5.5 9.5 1 6H6.5Z"/></svg></div>
+        <div class="i-title">Reducción de Agroquímicos</div>
+        <div class="i-text">Desarrollo de alternativas a fertilizantes y plaguicidas químicos que reducen significativamente la huella ecológica de la agricultura.</div>
+      </div>
+      <div class="impact-card reveal rd3">
+        <div class="impact-num">04</div>
+        <div class="i-ring"><svg viewBox="0 0 17 17" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3.5 13C3.5 13 3 7 8.5 4.5 14 2 15 7 11.5 9 8 11 8.5 15 8.5 15"/><path d="M8.5 4.5L8.5 2"/></svg></div>
+        <div class="i-title">Control Biológico de Plagas</div>
+        <div class="i-text">Investigación de hongos entomopatógenos como agentes seguros y eficaces para el manejo biológico de insectos plaga agrícolas.</div>
+      </div>
+      <div class="impact-card reveal rd4">
+        <div class="impact-num">05</div>
+        <div class="i-ring"><svg viewBox="0 0 17 17" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8.5" cy="8.5" r="3"/><circle cx="8.5" cy="8.5" r="6.5" stroke-dasharray="2 2"/><line x1="2.5" y1="2.5" x2="4.5" y2="4.5"/><line x1="12.5" y1="12.5" x2="14.5" y2="14.5"/><line x1="14.5" y1="2.5" x2="12.5" y2="4.5"/><line x1="4.5" y1="12.5" x2="2.5" y2="14.5"/></svg></div>
+        <div class="i-title">Salud del Ecosistema del Suelo</div>
+        <div class="i-text">Comprensión de la red invisible de microorganismos que mantiene la vitalidad del suelo y la resiliencia de los sistemas agrícolas.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section id="galeria">
+  <div class="galeria-wrap">
+    <div class="galeria-header-row">
+      <div>
+        <div class="section-label reveal">05 — Galería Visual</div>
+        <h2 class="section-heading reveal rd1">Del Campo<br>al <em>Laboratorio</em></h2>
+      </div>
+      <p class="galeria-intro reveal rd2">Mariajosé comparte su investigación en congresos científicos internacionales y vive cada experiencia con mucha pasión. Si quieres ver un poco de su día a día y cómo avanza su trabajo, puedes seguirla en Instagram. <a href="https://www.instagram.com/cote.carvajal.tv" target="_blank" rel="noopener" class="link-instagram">@cote.carvajal.tv</a>.</p>
+    </div>
+    <div class="gallery-grid" id="gallery-grid"></div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <div class="lb-inner">
+    <button class="lb-close" id="lb-close">Cerrar ✕</button>
+    <img id="lb-img" src="" alt="">
+    <div class="lb-cap" id="lb-cap"></div>
+  </div>
+</div>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="contacto-wrap">
+    <div>
+      <div class="section-label reveal">06 — Contacto</div>
+      <h2 class="section-heading reveal rd1">Sigue la<br><em>investigación</em></h2>
+      <p class="contacto-desc reveal rd2">Mariajosé documenta su camino a través de la ciencia, la vida de laboratorio y la naturaleza en Instagram, y mantiene su perfil académico público en ORCID.</p>
+      <div class="contact-links">
+        <a class="clink reveal rd2" href="https://www.instagram.com/cote.carvajal.tv" target="_blank" rel="noopener">
+          <span class="clink-dot"></span><span>@cote.carvajal.tv en Instagram</span><span class="clink-arr">→</span>
+        </a>
+        <a class="clink reveal rd3" href="https://orcid.org/0009-0005-0155-0332" target="_blank" rel="noopener">
+          <span class="clink-dot"></span><span>ORCID 0009-0005-0155-0332</span><span class="clink-arr">→</span>
+        </a>
+        <a class="clink reveal rd4" href="https://agronomia.uc.cl" target="_blank" rel="noopener">
+          <span class="clink-dot"></span><span>Facultad de Agronomía — PUC Chile</span><span class="clink-arr">→</span>
+        </a>
+      </div>
+    </div>
+    <div class="reveal rd1">
+      <div class="inst-card">
+        <div class="inst-badge">Filiación Institucional</div>
+        <div class="inst-name">Pontificia Universidad Católica de Chile</div>
+        <div class="inst-dept">Departamento de Fruticultura<br>Facultad de Agronomía y Sistemas Naturales<br><br><strong>YeastLab</strong> — Laboratorio de Microbiología y Genética de Levaduras</div>
+        <div class="inst-address">Marcoleta 367<br>Santiago, Chile</div>
+        <a class="map-btn" href="https://www.google.com/maps/place/Pontificia+Universidad+Católica+de+Chile/@-33.441013,-70.640557,17z" target="_blank" rel="noopener">◉ Ver en Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-name">Mariajosé Carvajal</div>
+    <div class="footer-center">
+      <a class="footer-studio" href="https://andinawebstudio.netlify.app" target="_blank" rel="noopener">Diseñado y desarrollado por Andina Web Studio</a>
+      
+    </div>
+    <a class="footer-orcid" href="https://orcid.org/0009-0005-0155-0332" target="_blank" rel="noopener">orcid.org/0009-0005-0155-0332</a>
+  </div>
+</footer>
+
+<script src="assets/js/hero-canvas.js"></script>
+<script src="assets/js/bio-canvas.js"></script>
+<script src="assets/js/gallery.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
