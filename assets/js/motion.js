@@ -142,7 +142,7 @@ if (reduceMotion) {
     const hint = document.createElement('div');
     hint.className = 'horizontal-hint';
     hint.innerHTML = `<span>${label}</span><i></i><strong>SCROLL PARA EXPLORAR</strong>`;
-    section.append(hint);
+    track.before(hint);
 
     const travel = () => {
       const styles = getComputedStyle(section);

@@ -643,9 +643,9 @@ footer{padding:3.2rem 3.5rem;background:var(--bg-deep);border-top:1px solid var(
   .lab-hud__section{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
   .global-grain{opacity:calc(.012 + var(--scroll-energy,0) * .025);}
   .horizontal-scroll-active{height:100svh;min-height:680px;padding:5rem 1.35rem 3rem!important;}
-  .horizontal-scroll-active .metodos-header-row,.horizontal-scroll-active .impact-header{margin-bottom:1.6rem;padding-bottom:1.25rem;}
+  .horizontal-scroll-active .metodos-header-row,.horizontal-scroll-active .impact-header{margin-bottom:.7rem;padding-bottom:1.1rem;}
   .horizontal-scroll-active .method-card,.horizontal-scroll-active .impact-card{flex-basis:82vw;width:82vw;min-height:310px;}
-  .horizontal-hint{left:1.35rem;right:1.35rem;bottom:3.15rem;grid-template-columns:auto 1fr auto;font-size:.41rem;gap:.55rem;}
+  .horizontal-hint{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:100%;margin:0 0 .72rem;grid-template-columns:auto 1fr auto;font-size:.41rem;gap:.55rem;}
   .horizontal-hint strong{min-width:0;}
 }
 @media(max-width:500px){.methods-grid{grid-template-columns:1fr;}.impact-grid{grid-template-columns:1fr;}}
