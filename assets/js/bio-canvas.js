@@ -6,6 +6,8 @@
   const W = 360;
   const H = 432;
   const pts = [];
+  let isActive = false;
+  let frameId = 0;
 
   for (let i = 0; i < 55; i++) {
     pts.push({
@@ -20,6 +22,7 @@
   }
 
   function drawBio() {
+    frameId = 0;
     ctx.clearRect(0, 0, W, H);
     const isDark = document.body.getAttribute('data-theme') !== 'light';
     ctx.fillStyle = isDark ? '#0e130e' : '#e3ece3';
@@ -89,8 +92,29 @@
     ctx.fillStyle = g;
     ctx.fillRect(0, 0, W, H);
 
-    requestAnimationFrame(drawBio);
+    if (isActive && !document.hidden) frameId = requestAnimationFrame(drawBio);
   }
 
-  drawBio();
+  function startDrawing() {
+    if (!isActive || document.hidden || frameId) return;
+    frameId = requestAnimationFrame(() => {
+      frameId = 0;
+      drawBio();
+    });
+  }
+
+  const bioObserver = new IntersectionObserver(
+    ([entry]) => {
+      isActive = entry.isIntersecting;
+      if (isActive) startDrawing();
+      else if (frameId) {
+        cancelAnimationFrame(frameId);
+        frameId = 0;
+      }
+    },
+    { rootMargin: '160px 0px' },
+  );
+
+  document.addEventListener('visibilitychange', startDrawing);
+  bioObserver.observe(canvas);
 })();

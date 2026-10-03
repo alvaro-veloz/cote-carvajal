@@ -39,13 +39,17 @@ if (navToggle && navLinks) {
   navToggle.addEventListener('click', () => {
     const isOpen = navToggle.classList.toggle('open');
     navLinks.classList.toggle('open');
+    document.body.classList.toggle('menu-open', isOpen);
     navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    navToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
   });
   navLinks.querySelectorAll('a').forEach((a) => {
     a.addEventListener('click', () => {
       navToggle.classList.remove('open');
       navLinks.classList.remove('open');
+      document.body.classList.remove('menu-open');
       navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Abrir menú');
     });
   });
 }
@@ -65,31 +69,4 @@ document.getElementById('themeBtn').addEventListener('click', () => {
   document.body.setAttribute('data-theme', t === 'dark' ? 'light' : 'dark');
 });
 
-/* Scroll reveal */
-const revs = document.querySelectorAll('.reveal');
-const obs = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((e) => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        obs.unobserve(e.target);
-      }
-    });
-  },
-  { threshold: 0.08, rootMargin: '0px 0px -50px 0px' }
-);
-revs.forEach((el) => obs.observe(el));
-
-/* Parallax background text */
-window.addEventListener(
-  'scroll',
-  () => {
-    const bt = document.getElementById('impact-bg');
-    if (!bt) return;
-    const s = document.getElementById('impacto');
-    if (!s) return;
-    const r = s.getBoundingClientRect();
-    bt.style.transform = `translate(-50%,calc(-50% + ${r.top * 0.14}px))`;
-  },
-  { passive: true }
-);
+/* Los reveals y parallax se coordinan desde motion.js con GSAP. */

@@ -5,14 +5,14 @@
  */
 (function () {
   const PHOTOS = [
-    { src: 'assets/img/gallery/mariajose-presentacion.webp', caption: 'Trabajo de field — YeastLab, PUC Chile' },
-    { src: 'assets/img/gallery/mariajose-presentacion2.webp', caption: 'Trabajo de field — YeastLab, PUC Chile' },
-    { src: 'assets/img/gallery/mariajose-presentacion3.webp', caption: 'Trabajo de field — YeastLab, PUC Chile' },
-    { src: 'assets/img/gallery/mariajose-presentacion4.webp', caption: 'Trabajo de field — YeastLab, PUC Chile' },
-    { src: 'assets/img/gallery/mariajose-presentacion5.webp', caption: 'Trabajo de field — YeastLab, PUC Chile' },
-    { src: 'assets/img/gallery/mariajose-presentacion6.webp', caption: 'Trabajo de field — YeastLab, PUC Chile' },
-    { src: 'assets/img/gallery/mariajose-presentacion7.webp', caption: 'Trabajo de field — YeastLab, PUC Chile' },
-    { src: 'assets/img/gallery/mariajose-presentacion8.webp', caption: 'Trabajo de field — YeastLab, PUC Chile' },
+    { src: new URL('../img/gallery/mariajose-presentacion.webp', import.meta.url).href, caption: 'Trabajo de field — YeastLab, PUC Chile' },
+    { src: new URL('../img/gallery/mariajose-presentacion2.webp', import.meta.url).href, caption: 'Trabajo de field — YeastLab, PUC Chile' },
+    { src: new URL('../img/gallery/mariajose-presentacion3.webp', import.meta.url).href, caption: 'Trabajo de field — YeastLab, PUC Chile' },
+    { src: new URL('../img/gallery/mariajose-presentacion4.webp', import.meta.url).href, caption: 'Trabajo de field — YeastLab, PUC Chile' },
+    { src: new URL('../img/gallery/mariajose-presentacion5.webp', import.meta.url).href, caption: 'Trabajo de field — YeastLab, PUC Chile' },
+    { src: new URL('../img/gallery/mariajose-presentacion6.webp', import.meta.url).href, caption: 'Trabajo de field — YeastLab, PUC Chile' },
+    { src: new URL('../img/gallery/mariajose-presentacion7.webp', import.meta.url).href, caption: 'Trabajo de field — YeastLab, PUC Chile' },
+    { src: new URL('../img/gallery/mariajose-presentacion8.webp', import.meta.url).href, caption: 'Trabajo de field — YeastLab, PUC Chile' },
   ];
 
   const scene = document.getElementById('galleryScene');

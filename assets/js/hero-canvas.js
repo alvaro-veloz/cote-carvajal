@@ -5,6 +5,8 @@
   let H;
   const particles = [];
   const mouse = { x: 0, y: 0 };
+  let isActive = true;
+  let frameId = 0;
 
   function resize() {
     W = canvas.width = window.innerWidth;
@@ -19,7 +21,7 @@
   });
 
   /* ---------- esporas ambientales ---------- */
-  const PARTICLE_COUNT = window.innerWidth < 768 ? 85 : 130;
+  const PARTICLE_COUNT = window.innerWidth < 768 ? 58 : 105;
   for (let i = 0; i < PARTICLE_COUNT; i++) {
     const px = Math.random();
     const py = Math.random();
@@ -203,6 +205,7 @@
   startCycle();
 
   function draw() {
+    frameId = 0;
     ctx.clearRect(0, 0, W, H);
     const isDark = document.body.getAttribute('data-theme') !== 'light';
     if (isDark) {
@@ -264,8 +267,30 @@
       ctx.fill();
     });
 
-    requestAnimationFrame(draw);
+    if (isActive && !document.hidden) frameId = requestAnimationFrame(draw);
   }
 
-  draw();
+  function startDrawing() {
+    if (!isActive || document.hidden || frameId) return;
+    frameId = requestAnimationFrame(() => {
+      frameId = 0;
+      draw();
+    });
+  }
+
+  const heroObserver = new IntersectionObserver(
+    ([entry]) => {
+      isActive = entry.isIntersecting;
+      if (isActive) startDrawing();
+      else if (frameId) {
+        cancelAnimationFrame(frameId);
+        frameId = 0;
+      }
+    },
+    { rootMargin: '120px 0px' },
+  );
+
+  document.addEventListener('visibilitychange', startDrawing);
+  heroObserver.observe(document.getElementById('hero'));
+  startDrawing();
 })();

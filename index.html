@@ -29,9 +29,40 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Syne:wght@400;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/main.css">
-<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
 </head>
 <body data-theme="dark">
+<div class="site-loader" id="siteLoader" aria-hidden="true">
+  <div class="loader-grid"></div>
+  <div class="loader-top">
+    <div class="loader-kicker">PROTOCOLO 01 · CULTIVO EN CURSO</div>
+    <div class="loader-coordinates">33.49°S · 70.61°W</div>
+  </div>
+  <div class="loader-stage">
+    <div class="loader-petri">
+      <span class="loader-orbit loader-orbit--one"></span>
+      <span class="loader-orbit loader-orbit--two"></span>
+      <span class="loader-cross loader-cross--x"></span>
+      <span class="loader-cross loader-cross--y"></span>
+      <i class="loader-cell loader-cell--1"></i>
+      <i class="loader-cell loader-cell--2"></i>
+      <i class="loader-cell loader-cell--3"></i>
+      <i class="loader-cell loader-cell--4"></i>
+      <i class="loader-cell loader-cell--5"></i>
+      <div class="loader-mark"><span>MJ</span><em>CULTURE</em></div>
+    </div>
+    <div class="loader-notes">
+      <span class="loader-note">MUESTRA<br><b>ST–025</b></span>
+      <span class="loader-note">ESPECIE<br><b>S. terrea</b></span>
+      <span class="loader-note">MEDIO<br><b>YPD · 28°C</b></span>
+    </div>
+  </div>
+  <div class="loader-footer">
+    <span>Desarrollando colonia</span>
+    <strong id="loaderCount">00</strong>
+  </div>
+  <div class="loader-line"><span></span></div>
+</div>
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursor-ring"><span></span><span></span><span></span></div>
 
@@ -39,6 +70,11 @@
 <nav>
   <span class="nav-logo">MJ Carvajal</span>
   <div class="nav-links" id="navLinks">
+    <div class="mobile-nav-art" aria-hidden="true">
+      <div class="mobile-nav-petri"><i></i><i></i><i></i><i></i></div>
+      <span>PLACA 01</span>
+      <strong>S. TERREA</strong>
+    </div>
     <a href="#biografia">Biografía</a>
     <a href="#publicaciones">Publicaciones</a>
     <a href="#metodos">Métodos</a>
@@ -46,6 +82,10 @@
     <a href="#galeria">Galería</a>
     <a href="#contacto">Contacto</a>
     <button class="theme-btn" id="themeBtn" aria-label="Cambiar tema"></button>
+    <div class="mobile-nav-foot" aria-hidden="true">
+      <span>YEASTLAB · PUC CHILE</span>
+      <span>PORTFOLIO / 2026</span>
+    </div>
   </div>
   <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -120,11 +160,11 @@
       </div>
       <div class="bio-lottie-row reveal rd3">
         <div class="bio-lottie-card">
-          <dotlottie-player src="assets/lottie/Cells.lottie" background="transparent" speed="1" autoplay loop></dotlottie-player>
+          <div class="lottie-slot" data-lottie="cells" aria-hidden="true"></div>
           <span class="bio-lottie-label">Cultivo celular</span>
         </div>
         <div class="bio-lottie-card">
-          <dotlottie-player src="assets/lottie/DNA_Loader.lottie" background="transparent" speed="1" autoplay loop></dotlottie-player>
+          <div class="lottie-slot" data-lottie="dna" aria-hidden="true"></div>
           <span class="bio-lottie-label">Extracción de ADN</span>
         </div>
       </div>
@@ -407,16 +447,13 @@
   <div class="footer-inner">
     <div class="footer-name">Mariajosé Carvajal</div>
     <div class="footer-center">
-      <a class="footer-studio" href="https://andinawebstudio.netlify.app" target="_blank" rel="noopener">Diseñado y desarrollado por Andina Web Studio</a>
+      <a class="footer-studio" href="https://andinawebstudio.com/" target="_blank" rel="noopener">Diseñado y desarrollado por Andina Web Studio</a>
       
     </div>
     <a class="footer-orcid" href="https://orcid.org/0009-0005-0155-0332" target="_blank" rel="noopener">orcid.org/0009-0005-0155-0332</a>
   </div>
 </footer>
 
-<script src="assets/js/hero-canvas.js"></script>
-<script src="assets/js/bio-canvas.js"></script>
-<script src="assets/js/gallery.js"></script>
-<script src="assets/js/main.js"></script>
+<script type="module" src="/assets/js/app.js"></script>
 </body>
 </html>
