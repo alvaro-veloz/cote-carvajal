@@ -110,7 +110,7 @@ if (reduceMotion) {
         duration: 1.25,
         ease: 'power2.inOut',
         onUpdate: () => {
-          if (loaderCount) loaderCount.textContent = String(Math.round(loaderValue.value)).padStart(2, '0');
+          if (loaderCount) loaderCount.textContent = String(Math.round(loaderValue.value)).padStart(3, '0');
         },
       },
       0.08,
